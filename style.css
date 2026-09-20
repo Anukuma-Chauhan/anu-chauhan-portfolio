@@ -1,0 +1,882 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: #111827;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    min-height: 90vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #f8fafc,
+        #eef2ff
+    );
+
+    padding: 70px 20px;
+
+    overflow: hidden;
+}
+
+.home-content {
+    width: 100%;
+
+    max-width: 1100px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* =========================
+   HOME TEXT
+========================= */
+
+.home-text {
+    flex: 1;
+
+    animation: slideFromLeft 1s ease;
+}
+
+.hello {
+    font-size: 20px;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.home h1 {
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.home h2 {
+    font-size: 28px;
+
+    color: #374151;
+
+    margin-bottom: 20px;
+}
+
+.intro {
+    font-size: 18px;
+
+    color: #4b5563;
+
+    max-width: 600px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.profile-container {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    animation: slideFromRight 1s ease;
+}
+
+.profile-image {
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 7px solid white;
+
+    box-shadow:
+        0 10px 30px rgba(37, 99, 235, 0.20);
+
+    transition: transform 0.4s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   HOME BUTTONS
+========================= */
+
+.home-buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    gap: 15px;
+
+    .resume-btn {
+    background-color: #111827;
+}
+
+.resume-btn:hover {
+    background-color: #2563eb;
+}
+}
+
+.btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 13px 26px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.secondary-btn {
+    background-color: transparent;
+
+    color: #2563eb;
+
+    border: 2px solid #2563eb;
+}
+
+.secondary-btn:hover {
+    background-color: #2563eb;
+
+    color: white;
+}
+
+
+/* =========================
+   HOME ANIMATIONS
+========================= */
+
+@keyframes slideFromLeft {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes slideFromRight {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    background-color: white;
+}
+
+.about-content {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.about-text {
+    max-width: 800px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #4b5563;
+
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   ABOUT HIGHLIGHTS
+========================= */
+
+.about-highlights {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.about-card {
+    width: 280px;
+
+    padding: 25px;
+
+    background-color: #f8fafc;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    border: 1px solid #e5e7eb;
+
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.about-card h3 {
+    color: #2563eb;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+}
+
+.about-card p {
+    color: #4b5563;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+#skills {
+    background-color: #f3f4f6;
+}
+
+.skills-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.skill-category {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    border: 1px solid #e5e7eb;
+
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.skill-category h3 {
+    color: #2563eb;
+
+    font-size: 19px;
+
+    margin-bottom: 25px;
+}
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.skill-list span {
+    padding: 8px 14px;
+
+    background-color: #eff6ff;
+
+    color: #1d4ed8;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+#projects {
+    background-color: white;
+}
+
+.projects-intro {
+    max-width: 700px;
+
+    margin: -20px auto 40px;
+
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 17px;
+}
+
+.projects-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px;
+
+    background-color: #f8fafc;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.project-icon {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 21px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #4b5563;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+.project-card .technology {
+    color: #2563eb;
+
+    font-weight: bold;
+
+    margin-top: auto;
+}
+
+.project-buttons {
+    margin-top: 20px;
+}
+
+.project-btn {
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    background-color: #111827;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background-color: #2563eb;
+
+    transform: translateY(-2px);
+}
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    background-color: #f3f4f6;
+    text-align: center;
+}
+
+.contact-intro {
+    max-width: 650px;
+
+    margin: -20px auto 35px;
+
+    color: #6b7280;
+
+    font-size: 17px;
+}
+
+
+/* Contact Links */
+
+.contact-links {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 60px;
+
+    margin-top: 30px;
+}
+
+.contact-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #111827;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #2563eb;
+
+    background-color: white;
+
+    transform: translateY(-3px);
+}
+
+.contact-link span {
+    font-size: 16px;
+}
+
+
+/* =========================
+   MOBILE CONTACT
+========================= */
+
+@media (max-width: 768px) {
+
+    .contact-links {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Home */
+
+    .home {
+        min-height: auto;
+
+        padding: 60px 20px;
+    }
+
+    .home-content {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+
+    /* Profile Photo */
+
+    .profile-container {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 200px;
+
+        height: 200px;
+    }
+
+
+    /* Text */
+
+    .home-text {
+        width: 100%;
+    }
+
+    .home h1 {
+        font-size: 42px;
+    }
+
+    .home h2 {
+        font-size: 22px;
+    }
+
+    .intro {
+        font-size: 16px;
+
+        margin: auto;
+    }
+
+
+    /* Buttons */
+
+    .home-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .btn {
+        width: 220px;
+
+        text-align: center;
+    }
+
+
+    /* Sections */
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+
+    /* Projects */
+
+    .projects-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* Skills */
+
+    .skill {
+        padding: 12px 20px;
+    }
+
+
+    /* Contact */
+
+    .contact-links {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+    .about-text {
+    font-size: 16px;
+}
+
+.about-highlights {
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.about-card {
+    width: 100%;
+
+    max-width: 350px;
+}
+
+.projects-container {
+    grid-template-columns: 1fr;
+
+    max-width: 400px;
+}
+
+.projects-intro {
+    font-size: 16px;
+}
+.contact-container {
+    grid-template-columns: 1fr;
+
+    max-width: 400px;
+}
+
+.contact-intro {
+    font-size: 16px;
+}
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .profile-image {
+        width: 180px;
+
+        height: 180px;
+    }
+
+    .home h1 {
+        font-size: 34px;
+    }
+
+    .home h2 {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+}
